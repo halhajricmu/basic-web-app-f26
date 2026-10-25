@@ -30,4 +30,8 @@ describe("QueryProcessor", () => {
   const response: string = QueryProcessor(query);
   expect(response).toBe("halhajri");
 });
+test('should find anagram', () => {
+  const query = "Which of the following is an anagram of listen: banana, google, enlists, silent?";
+  expect(QueryProcessor(query)).toBe("silent");
+});
 });
